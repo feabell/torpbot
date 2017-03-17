@@ -8,8 +8,9 @@ from time import gmtime, strftime
 
 config = yaml.load(file('plugins/torp/torpbot.conf', 'r'))
 token = config["SLACK_TOKEN"]
+priv_token = config["SLACK_PRIV_TOKEN"]
 
-api_client = slackapi.init(token)
+api_client = slackapi.init(token, priv_token)
 
 #logging.basicConfig(filename='/tmp/statsbot.log', level=logging.INFO)
 
